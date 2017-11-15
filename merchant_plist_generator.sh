@@ -1,6 +1,6 @@
 
 #!/bin/bash
-appInfoPlistPath="Jovi/Jovi/Jovi-Info-AdHoc.plist"
+appInfoPlistPath="Jovi/Jovi/Info.plist"
 bundleShortVersion=$(/usr/libexec/PlistBuddy -c "print CFBundleShortVersionString" ${appInfoPlistPath})
 bundleVersion=$(/usr/libexec/PlistBuddy -c "print CFBundleVersion" ${appInfoPlistPath})
 

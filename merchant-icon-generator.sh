@@ -4,11 +4,13 @@ SRC_FILE="$1"
 shortVersion="$2"
 bundlerNum="$3"
 
-convert "$SRC_FILE" -region 1024x254+0+770 -fill "rgb(0,159,250)" -colorize 100%   -region 1024x254+650+770 -fill "rgb(102,230,32)" -colorize 100%  target-new.png  
+
+
+convert origin_1024.png -region 1024x254+0+770 -fill "rgb(0,159,250)" -colorize 100%   -region 1024x254+650+770 -fill "rgb(102,230,32)" -colorize 100%  target-new.png  
 convert target-new.png -gravity southwest -fill white -font DINPro-Bold.otf -pointsize 230 -draw "text 60,-10 '$shortVersion'"  -gravity southeast -fill white -pointsize 230 -draw "text 60,-10 '$bundlerNum'" target-new.png
 
 
-DST_PATH="Jovi/JVImages.xcassets/AppIcon.appiconset/"
+DST_PATH="Jovi/Jovi/JVImages.xcassets/AppIcon.appiconset/"
 
 if [ ! -d "$DST_PATH" ];then
     mkdir -p "$DST_PATH"
