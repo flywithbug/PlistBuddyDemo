@@ -6,7 +6,7 @@ bundlerNum="$3"
 
 
 
-convert origin_1024.png -region 1024x254+0+770 -fill "rgb(0,159,250)" -colorize 100%   -region 1024x254+650+770 -fill "rgb(102,230,32)" -colorize 100%  target-new.png  
+convert "$SRC_FILE" -region 1024x254+0+770 -fill "rgb(0,159,250)" -colorize 100%   -region 1024x254+650+770 -fill "rgb(102,230,32)" -colorize 100%  target-new.png  
 convert target-new.png -gravity southwest -fill white -font DINPro-Bold.otf -pointsize 230 -draw "text 60,-10 '$shortVersion'"  -gravity southeast -fill white -pointsize 230 -draw "text 60,-10 '$bundlerNum'" target-new.png
 
 
